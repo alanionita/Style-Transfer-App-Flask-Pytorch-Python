@@ -6,28 +6,44 @@
 />
 <main>
   <h1 class="title">Style Transfer App</h1>
-  <h3 class="subtitle">Transforms the content image to look like the styles image using AI</h3>
+  <h3 class="subtitle">
+    Transforms the content image to look like the styles image using AI
+  </h3>
   <form class="form" id="form">
-    <fieldset class="form__fieldset">
-      <legend>Add content image</legend>
-      <input class="form__fieldset__input" type="file" name="content-image" accept="image/jpeg" onchange="" />
-      <figure class="form__fieldset__preview">
-        <img class="form__fieldset__preview__img" />
-        <figcaption class="form__fieldset__preview__caption">
-          No preview available
-        </figcaption>
-      </figure>
-    </fieldset>
-    <fieldset class="form__fieldset">
-      <legend>Add style image</legend>
-      <input class="form__fieldset__input" type="file" name="style-image" accept="image/jpeg" onchange="" />
-      <figure class="form__fieldset__preview">
-        <img class="form__fieldset__preview__img" />
-        <figcaption class="form__fieldset__preview__caption">
-          No preview available
-        </figcaption>
-      </figure>
-    </fieldset>
+    <section class="form__inner">
+      <fieldset class="form__fieldset">
+        <legend>Add content image</legend>
+        <input
+          class="form__fieldset__input"
+          type="file"
+          name="content-image"
+          accept="image/jpeg"
+          onchange=""
+        />
+        <figure class="form__fieldset__preview">
+          <img class="form__fieldset__preview__img" />
+          <figcaption class="form__fieldset__preview__caption">
+            No preview available
+          </figcaption>
+        </figure>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend>Add style image</legend>
+        <input
+          class="form__fieldset__input"
+          type="file"
+          name="style-image"
+          accept="image/jpeg"
+          onchange=""
+        />
+        <figure class="form__fieldset__preview">
+          <img class="form__fieldset__preview__img" />
+          <figcaption class="form__fieldset__preview__caption">
+            No preview available
+          </figcaption>
+        </figure>
+      </fieldset>
+    </section>
     <button class="form__button--submit" type="submit">Create style</button>
   </form>
 </main>
