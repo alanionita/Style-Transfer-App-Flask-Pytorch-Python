@@ -1,5 +1,7 @@
 # Style Transfer App 
 
+![app screenshot](readme_assets/images/ui-screenshot.png)
+
 An app that use a hand-rolled Pytorch neural net that extracts styles from one image and applies them to another image.
 
 # Why this project?
@@ -25,7 +27,11 @@ As in that paper we use a 19-layer VGG Network to extract content and style feat
 ## Pre-requisites 
 
 * Python3
-* Computer with a GPU or Colab account (for the ML code)
+* Computer with a GPU or a Colab account (for the ML code)
+* [Serverless framework CLI](https://serverless.com/framework/docs/getting-started/) (only for deployment)
+* [Amazon Web Services](https://aws.amazon.com/) account (only for deployment)
+* [Amazon Web Services CLI](https://github.com/aws/aws-cli) connected to your account (only for deployment)
+* Optional - [Serverless Framework account](serverless.com/)
 
 ## Environment setup 
 
@@ -52,8 +58,7 @@ pip3 install -r requirements.txt
 ## Start the app
 
 ```zsh
-export API_KEY='YOUR_KEY_GOES_HERE'
-python run-app.py
+python app.py
 ```
 # Deployment
 
@@ -75,35 +80,9 @@ sls wsgi serve
 
 ## Pre-deploy
 
-Create a serverless.yml file
-
-```yml
-service: style-transfer-app
-
-provider:
-  name: aws
-  runtime: python3.7
-  stage: dev
-  region: your-region
-  memorySize: 128
-
-plugins:
-  - serverless-wsgi
-  - serverless-python-requirements
-
-custom:
-  wsgi:
-    app: app.app
-    packRequirements: false
-
-functions:
-  app:
-    handler: wsgi.handler
-    events:
-      - http: ANY /
-      - http: "ANY {proxy+}"
-
-```
+- create an AWS account
+- set up the AWS CLI to use your account
+- install the Serverless Framework CLI
 
 ## Deployment 
 
@@ -119,7 +98,8 @@ Your enpoints will be there in the console.
 
 # Attributions
 
-- Bertelsmann AI developer scholarship, Udacity
+- Bertelsmann AI developer scholarship, Udacity for the training and Style Transfer CNN example
+- Pytorch website for the [lovely background](https://pytorch.org/assets/images/home-background.jpg)
 
 # Contributing
 
