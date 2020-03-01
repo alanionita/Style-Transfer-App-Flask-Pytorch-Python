@@ -27,6 +27,20 @@ As in that paper we use a 19-layer VGG Network to extract content and style feat
 * Python3
 * Computer with a GPU or Colab account (for the ML code)
 
+## Environment setup 
+
+Create a venv folder (on MacOS)
+
+```zsh
+python3 -m venv venv
+```
+
+Activate the environment
+
+```zsh
+. venv/bin/activate
+```
+
 ## Installation
 
 Use the package manager [pip3](https://pip.pypa.io/en/stable/) to install app dependencies.
