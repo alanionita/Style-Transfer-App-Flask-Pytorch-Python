@@ -1,0 +1,99 @@
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+
+body {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-size: 150% 150%;
+  background-image: url(./assets/background.jpg);
+  animation: shiftBackground 40s ease infinite;
+}
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form > * {
+  flex: 1 1 auto;
+}
+
+.form__fieldset {
+  width: 90%;
+  height: 10vh;
+  margin: 1vh 0;
+}
+
+.form__fieldset__input {
+  cursor: pointer   ;
+}
+
+.form__button--submit {
+  width: auto;
+  height: auto;
+  margin: 4vh 0;
+  background: none;
+  box-shadow: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border: 1px solid white;
+  transition: background, color, border 250ms ease-in-out;
+}
+
+.form__button--submit:hover,
+.form__button--submit:focus,
+.form__button--submit:active {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  color: #ffffff;
+  padding: 0;
+  margin: 1rem;
+  font-size: 2em;
+}
+
+.subtitle {
+  text-align: center;
+  color: #ffffff;
+  padding: 0;
+  margin: 2rem;
+  font-size: 1em;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+@keyframes shiftBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
