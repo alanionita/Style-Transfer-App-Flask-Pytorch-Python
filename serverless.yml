@@ -1,0 +1,24 @@
+service: style-transfer-app-flask-pytorch-python
+
+provider:
+  name: aws
+  runtime: python3.7
+  stage: dev
+  region: eu-west-2
+  memorySize: 128
+
+plugins:
+  - serverless-wsgi
+  - serverless-python-requirements
+
+custom:
+  wsgi:
+    app: app.app
+    packRequirements: false
+
+functions:
+  app:
+    handler: wsgi_handler.handler
+    events:
+      - http: ANY /
+      - http: "ANY {proxy+}"

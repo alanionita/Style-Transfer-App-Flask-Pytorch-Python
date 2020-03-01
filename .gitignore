@@ -209,4 +209,3 @@ dmypy.json
 # Serverless
 
 /.serverless
-serverless.yml
