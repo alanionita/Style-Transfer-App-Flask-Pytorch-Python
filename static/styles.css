@@ -13,7 +13,7 @@ body {
   font-family: "Roboto", sans-serif;
   text-align: center;
   background-size: 150% 150%;
-  background-image: url(./assets/background.jpg);
+  background-image: url(https://pytorch.org/assets/images/home-background.jpg);
   animation: shiftBackground 40s ease infinite;
 }
 main {
